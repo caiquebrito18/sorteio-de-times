@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./land-page.component.css']
 })
 export class LandPageComponent implements OnInit {
-  isHide = true;
+  isHide = true
   align: string;
   constructor() { 
     this.align = "center";
