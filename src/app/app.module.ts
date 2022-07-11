@@ -12,6 +12,8 @@ import { BuscaJogadorComponent } from './busca-jogador/busca-jogador.component';
 import { NovoJogadorComponent } from './novo-jogador/novo-jogador.component';
 import { ListaJogadorComponent } from './lista-jogador/lista-jogador.component';
 import { JogadorFormComponent } from './jogador-form/jogador-form.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { JogadorFormComponent } from './jogador-form/jogador-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
