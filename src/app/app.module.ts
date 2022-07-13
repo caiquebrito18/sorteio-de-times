@@ -7,6 +7,13 @@ import { HeaderComponent } from './header/header.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { LandPageComponent } from './land-page/land-page.component';
+import { LoginComponent } from './login/login.component';
+import { BuscaJogadorComponent } from './busca-jogador/busca-jogador.component';
+import { NovoJogadorComponent } from './novo-jogador/novo-jogador.component';
+import { ListaJogadorComponent } from './lista-jogador/lista-jogador.component';
+import { JogadorFormComponent } from './jogador-form/jogador-form.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +21,17 @@ import { LandPageComponent } from './land-page/land-page.component';
     HeaderComponent,
     MainMenuComponent,
     RodapeComponent,
-    LandPageComponent
+    LandPageComponent,
+    LoginComponent,
+    BuscaJogadorComponent,
+    NovoJogadorComponent,
+    ListaJogadorComponent,
+    JogadorFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

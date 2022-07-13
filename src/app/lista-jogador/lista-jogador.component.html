@@ -1,0 +1,33 @@
+<div class="container">
+  <app-busca-jogador (buscarJogador)="onBuscarJogador($event)"></app-busca-jogador>
+  <app-novo-jogador></app-novo-jogador>
+
+<div *ngFor="let jogador of jogadores" class="collection">
+
+  <table class="my-table">
+    <tr>
+      <td>
+        {{jogador.nome}}
+      </td>
+      <td>
+        <button
+          class="btn waves-effect waves-green my-button-green darken-4"
+          type="submit"
+          (click)="onSelect(jogador)"
+        >
+        Editar
+        </button>
+      </td>
+      <td>
+        <button
+          class="btn waves-effect waves-green red darken-4"
+          type="submit"
+          [routerLink]="['/jogador']"
+        >
+        Deletar
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>
