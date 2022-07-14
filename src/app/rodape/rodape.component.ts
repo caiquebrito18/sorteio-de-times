@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rodape.component.css']
 })
 export class RodapeComponent implements OnInit {
+  name: string;
   year: number;
   constructor() { 
     this.year = new Date().getFullYear();
+    this.name = "Caique Brito Santos";
   }
 
   ngOnInit(): void {}
