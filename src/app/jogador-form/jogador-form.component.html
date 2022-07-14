@@ -1,42 +1,65 @@
 <div class="container">
     <h3>Edição do jogador de ID: {{ jogadorId }}</h3>
-    <form class="col s12">
+    <form class="col s12" #form="ngForm" (submit)="onSubmit()">
         <div class="row">
             <div class="input-field col s12">
-                <input id="nome" type="text" class="validate">
-                <label for="nome">Nome</label>
+                <label for="nome">Nome</label></div>
+            </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input required 
+                id="nome" 
+                name="nome" 
+                [(ngModel)]="this.data.nome" 
+                type="text" 
+                class="validate" 
+                pattern="^[a-z|A-Z|à-ú|À-Ú\s]+$">
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="idade" type="text" class="validate">
                 <label for="idade">Idade</label>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s6">
-                <select class="browser-default">
-                <option value="" disabled selected>Sexo</option>
-                <option value="1">Masculino</option>
-                <option value="2">Feminino</option>
-                <option value="3">Outros</option>
-                </select>
-          </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s6">
-                <select class="browser-default">
-                <option value="" disabled selected>Perna preferida</option>
-                <option value="1">Direita</option>
-                <option value="2">Esquerda</option>
-                <option value="3">Ambidestro</option>
-                </select>
-          </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s6">
-                <a class="waves-effect waves-light btn">Salvar</a>
+            <div class="input-field col s12">
+                <input required 
+                id="idade" 
+                name="idade" 
+                [(ngModel)]="this.data.idade" 
+                type="number" 
+                class="validate">
             </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <select id="sexo" name="sexo" [(ngModel)]="this.data.sexo" class="browser-default" required>
+                <option value="" disabled selected>Sexo</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Outros">Outros</option>
+                </select>
+          </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <select id="perna" name="perna" [(ngModel)]="this.data.perna" class="browser-default" required>
+                <option value="" disabled selected>Perna preferida</option>
+                <option value="Direita">Direita</option>
+                <option value="Esquerda">Esquerda</option>
+                <option value="Ambidestro">Ambidestro</option>
+                </select>
+          </div>
+        </div>
+        <div class="row">
+            <button
+            class="waves-effect waves-light btn"
+            type="submit"
+            [disabled]="!form.valid"
+          >
+              Salvar
+            <i class="material-icons right">send</i>
+          </button>
         </div>
     </form>
 </div>

@@ -13,6 +13,7 @@ import { NovoJogadorComponent } from './novo-jogador/novo-jogador.component';
 import { ListaJogadorComponent } from './lista-jogador/lista-jogador.component';
 import { JogadorFormComponent } from './jogador-form/jogador-form.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
