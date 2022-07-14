@@ -41,13 +41,6 @@
       "idade": "32",
       "perna": "esquerda",
       "sexo": "masculino"
-    },
-    {
-      "id": 422,
-      "nome": "Nara",
-      "idade": 23,
-      "sexo": "Feminino",
-      "perna": "Direita"
     }
   ]
 }

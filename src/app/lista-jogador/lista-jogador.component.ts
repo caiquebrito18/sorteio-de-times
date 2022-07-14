@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Jogador } from '../model/jogador';
 import { jogadores } from '../util/jogadores';
 import { Router } from '@angular/router'; 
+import { JogadorPromiseService } from '../services/jogador-promise.service';
 
 @Component({
   selector: 'app-lista-jogador',
@@ -12,18 +13,21 @@ import { Router } from '@angular/router';
 
 export class ListaJogadorComponent implements OnInit {
 
-  jogadores = jogadores;
+  jogadores?: Jogador[];
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router, 
+    private jogadorPromiseService: JogadorPromiseService) { }
 
   ngOnInit(): void {
+    this.jogadorPromiseService.getJogadores()
+      .then(value => { this.jogadores = value;});
   }
 
   onBuscarJogador(valor: string){
     if(this.isEmpty(valor)){
       this.jogadores = jogadores;
     } else {
-      this.jogadores = this.jogadores.filter((a) => a.nome == valor);
+      // this.jogadores = this.jogadores.filter((a) => a.nome == valor);
     }
   }
 
