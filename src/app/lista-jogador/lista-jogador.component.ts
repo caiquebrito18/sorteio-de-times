@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Jogador } from '../model/jogador';
 import { jogadores } from '../util/jogadores';
 import { Router } from '@angular/router'; 
-import { JogadorPromiseService } from '../services/jogador-promise.service';
+// import { JogadorPromiseService } from '../services/jogador-promise.service';
+import { JogadorObservableService } from '../services/jogador-observable.service';
+
 
 @Component({
   selector: 'app-lista-jogador',
@@ -16,11 +18,18 @@ export class ListaJogadorComponent implements OnInit {
   jogadores?: Jogador[];
 
   constructor(private _router: Router, 
-    private jogadorPromiseService: JogadorPromiseService) { }
+    private jogadorObservableService: JogadorObservableService) { }
 
   ngOnInit(): void {
-    this.jogadorPromiseService.getJogadores()
-      .then(value => { this.jogadores = value;});
+    this.jogadorObservableService.getAll()
+        .subscribe(
+          (data) => {
+            this.jogadores = data;
+          },
+          (error) => {
+            alert('ERRO INESPERADO!');
+          }
+        );
   }
 
   onBuscarJogador(valor: string){
