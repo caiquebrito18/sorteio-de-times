@@ -1,5 +1,5 @@
 <div class="container">
-    <h3>Edição do jogador de ID: {{ jogadorId }}</h3>
+    <h3 *ngIf="jogadorId">Edição do jogador de ID: {{ jogadorId }}</h3>
     <form class="col s12" #form="ngForm" (submit)="onSubmit()">
         <div class="row">
             <div class="input-field col s12">
