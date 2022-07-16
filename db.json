@@ -27,20 +27,6 @@
       "idade": "23",
       "perna": "esquerda",
       "sexo": "masculino"
-    },
-    {
-      "id": 5,
-      "nome": "Caique",
-      "idade": "26",
-      "perna": "direita",
-      "sexo": "masculino"
-    },
-    {
-      "id": 6,
-      "nome": "Hugo",
-      "idade": "32",
-      "perna": "esquerda",
-      "sexo": "masculino"
     }
   ]
 }
