@@ -27,7 +27,7 @@ export class ListaJogadorComponent implements OnInit {
             this.jogadores = data;
           },
           (error) => {
-            alert('ERRO INESPERADO!');
+            alert('Erro ao carregar a listagem!');
           }
         );
   }

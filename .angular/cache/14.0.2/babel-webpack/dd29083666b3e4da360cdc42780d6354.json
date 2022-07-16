@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Jogador {\n  constructor(nome, idade, sexo, perna) {\n    this.id = Math.round(Math.random() * 1000);\n    this.nome = nome;\n    this.idade = idade;\n    this.sexo = sexo;\n    this.perna = perna;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
