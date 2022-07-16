@@ -1,0 +1,1 @@
+{"ast":null,"code":"export let RoutesAPI = /*#__PURE__*/(() => {\n  class RoutesAPI {}\n\n  RoutesAPI.JOGADORES = 'http://localhost:3000/jogadores';\n  return RoutesAPI;\n})();","map":null,"metadata":{},"sourceType":"module"}
