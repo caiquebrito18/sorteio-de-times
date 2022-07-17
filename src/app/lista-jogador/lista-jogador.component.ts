@@ -34,9 +34,11 @@ export class ListaJogadorComponent implements OnInit {
 
   onBuscarJogador(valor: string){
     if(this.isEmpty(valor)){
+      console.log('entrou no if, valor: '+ valor);
       this.jogadores = jogadores;
     } else {
       if (this.jogadores !== undefined) {
+        console.log('entrou no else, valor: ' + valor);
         this.jogadores = this.jogadores.filter((a) => a.nome == valor);
       }
     }
