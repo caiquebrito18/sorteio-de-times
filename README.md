@@ -1,7 +1,10 @@
-Link para os protóripos no Figma
+#Acesso ao projeto
+https://caiquebrito18.github.io/sorteio-de-times/
+
+#Link para os protóripos no Figma
 https://www.figma.com/file/SJOK67TS0BioHqi9L9zUEb/Projeto-P%C3%B3s?node-id=2%3A2
 
-Checklist
+#Checklist
 
 - [x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop.
 - [x] Usar componentes de algum framework CSS (Bootstrap, Materialize ou outro)
