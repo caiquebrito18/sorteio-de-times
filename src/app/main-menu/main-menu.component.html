@@ -2,9 +2,9 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo"><app-header></app-header></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li> <!--Tela de listagem-->
-        <li><a href="#">Novo jogador</a></li> <!--Avançar para tela de cadastro-->
-        <li><a href="#">Sair</a></li> <!--Voltar para tela de login-->
+        <li><a [routerLink]="['jogador']">Home</a></li> <!--Tela de listagem-->
+        <li><a [routerLink]="['jogador/new']" [queryParams]="{novo: 'true'}">Novo jogador</a></li> <!--Avançar para tela de cadastro-->
+        <li><a [routerLink]="['/']">Sair</a></li> <!--Voltar para tela de login-->
       </ul>
     </div>
   </nav>

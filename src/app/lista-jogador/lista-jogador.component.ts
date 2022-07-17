@@ -36,7 +36,9 @@ export class ListaJogadorComponent implements OnInit {
     if(this.isEmpty(valor)){
       this.jogadores = jogadores;
     } else {
-      // this.jogadores = this.jogadores.filter((a) => a.nome == valor);
+      if (this.jogadores !== undefined) {
+        this.jogadores = this.jogadores.filter((a) => a.nome == valor);
+      }
     }
   }
 
